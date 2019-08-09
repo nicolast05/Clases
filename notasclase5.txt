@@ -1,0 +1,49 @@
+notas clase 5
+ngModel solo y name en cada input
+
+pristine true
+después de dar clic en registrar se pone false
+
+pristine data original
+
+touch se ha tocado uno de los controles
+
+dirty lo opuesto de pristine
+
+untouch lo opuesto del touch
+
+valid para validaciones del formulario  en un inicio es true porque no tiene validaciones
+
+invalid
+
+necesito q 3 controles sean obligatorios
+
+cuando se usa formMpdule las validaciones tienen que estar en html
+
+require
+
+angular inhibe las validaciones de html
+
+los validados se ponen como atributo de la etiqueta input
+
+errors te indica que validado esta dando el error
+
+validador min en angular
+
+los botones tienen una propiedad disable
+
+lo que tienen michi son referencias
+
+corchete significa que primero va ser evaluado
+
+ngsubmit cuando se envia llame al metodo registrar
+
+viewchild
+
+el setvalue pide que pongas para otods los campos
+
+patchvalue sirve para cargar data parcial
+
+en el proyecto
+
+hagan que el login no se pase a menos que el usuario y el pass no ayan registrado

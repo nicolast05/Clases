@@ -1,0 +1,43 @@
+<!-- <form #formulario = "ngForm">
+  <input type="correo" ngModel name="email" required>
+  <input type="nombre" ngModel name="nombre" required>
+  <input type="pass" ngModel name="contrasena" required>
+  <button (click)="registrar(formulario)">Registrar</button>
+</form> -->
+<div class="container">
+    <div>
+  
+      <form (ngSubmit)="registrar()" #formulario="ngForm">
+        <div>
+          <input type="text" placeholder="Correo" ngModel name="correo" required email #correo="ngModel">
+          <span *ngIf = "correo.invalid && correo.touched && correo.errors.required">El correo es obligatorio</span>
+          <span *ngIf = "correo.invalid && correo.touched && correo.errors.email">El formato es de un correo</span>
+        </div>
+        <div>
+          <input type="text" placeholder="Nombre" ngModel name="nombre" required #nombre="ngModel">
+          <span *ngIf = "nombre.invalid && nombre.touched">El nombre es obligatorio</span>
+        </div>
+        <div>
+          <input type="password" placeholder="Contrasena"  ngModel name="pass" required #pass="ngModel">
+          <span *ngIf = "pass.invalid && pass.touched">El pass es obligatorio</span>
+        </div>
+        <div>
+          <input type="edad" placeholder="Edad"  ngModel name="edad" required #edad="ngModel" min = "18">
+          <!-- <span>No aplica edad</span> -->
+          </div>
+        <div>
+          <button [disabled] = "formulario.invalid">
+            Registrar
+          </button>
+          <button type="button" (click) = "cargarData()">
+            Cargar Data
+          </button>
+          <button type="button" (click) = "cargarDataParcial()">
+            Cargar Data Parcial
+          </button>
+        </div>
+      </form>
+  
+  
+    </div>
+  </div>
